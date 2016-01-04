@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDocumentTable extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,19 @@ class CreateDocumentTable extends Migration
      */
     public function up()
     {
-        Schema::create('document', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('asunto');
-            $table->integer('office_id')->unsigned();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password', 60);
+            $table->integer('office_id')->unsigned()->nullable();
 
             $table->foreign('office_id')->references('id')->on('office');
+            $table->rememberToken();
             $table->timestamps();
         });
+
+        
     }
 
     /**
@@ -29,6 +34,6 @@ class CreateDocumentTable extends Migration
      */
     public function down()
     {
-        Schema::drop('document');
+        Schema::drop('users');
     }
 }

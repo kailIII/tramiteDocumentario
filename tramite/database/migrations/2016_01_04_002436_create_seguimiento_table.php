@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateSeguimientoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,19 +12,19 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('seguimiento', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password', 60);
-            
+            $table->enum('estado', ['ENVIADO','RECIBIDO','ELIMINADO'])->default('RECIBIDO');
+            $table->integer('document_id')->unsigned();
             $table->integer('office_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+
+            $table->foreign('document_id')->references('id')->on('document');
             $table->foreign('office_id')->references('id')->on('office');
-            $table->rememberToken();
+            $table->foreign('user_id')->references('id')->on('users');
+
             $table->timestamps();
         });
-
-        
     }
 
     /**
@@ -34,6 +34,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::drop('seguimiento');
     }
 }
