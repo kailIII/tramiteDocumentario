@@ -6,9 +6,12 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
-
+                <?php $users = DB::select('select * from users');
+                    foreach($users as $user){
+                    echo $user->email;
+                    } ?>
                 <div class="panel-body">
-                    You are logged in!
+                    Ha iniciado la sesión!
                 </div>
             </div>
         </div>
