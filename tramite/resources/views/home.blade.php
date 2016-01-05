@@ -11,24 +11,23 @@
                 <div class="panel-body">
                     Disculpe las molestias, tiene que asignar una oficina una ves iniciada la Sesión.
                     
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" action="HomeController.php" method="POST">
                         <div class="form-group">
                                 <label class="col-md-4 control-label">Oficina</label>    
                             <div class="col-md-6">
                                 <div class="dropdown">
-                                  <select class="form-control" name="list_offices">
-                                  <?php 
-                                  $offices = DB::select('select * from office');
-                                  foreach ($offices as $office) {
-                                      echo "<option>$office->name_office</option>";
-                                  }
-                                  ?>
-                                  </select>
-                                  <?php 
-                                  $var = $_POST['list_offices'];
-                                  echo $var; 
-                                  ?>
+                                    
+                                      <select name="list_offices" class="form-control">
+                                      <?php
+                                      $offices = DB::select('select * from office');
+                                      foreach ($offices as $office) {
+                                      ?> <option value=<?php $office->id ?>><?php echo $office->name_office ?></option> <?php
+                                      }
+                                      ?>
+                                      </select>
+                                    
                                 </div>
+
                         </div>
                     </form>
                 </div>

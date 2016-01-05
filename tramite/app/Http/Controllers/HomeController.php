@@ -23,6 +23,12 @@ class HomeController extends Controller
      *
      * @return Response
      */
+    public function evaluar()
+    {
+        $Office = $_POST['list_offices'];
+        echo $Office;
+    }
+
     public function index()
     {
         return view('home');

@@ -27,7 +27,7 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    //Route::resource('office','OfficesController');
 });
 
 Route::group(['middleware' => 'web'], function () {
@@ -41,6 +41,11 @@ Route::group(['middleware' => 'web'], function () {
     	return view('home');
 	});
 
+    Route::resource('office','OfficesController');
     
     Route::get('/home', 'HomeController@index');
 });
+
+//Route::group(['middleware' => 'web'], function(){
+//	Route::resource('office','OfficesController');
+//});

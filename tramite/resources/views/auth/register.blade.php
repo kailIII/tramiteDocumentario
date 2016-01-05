@@ -24,6 +24,19 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Oficina</label>
+                            <div class="col-md-6">
+                                <select type="oficina" class="form-control" name="oficina">
+                                {!! $offices = App\Office::all() !!}
+                                @foreach($offices as $office)
+                                <option value="{!! $office->id !!}">{{ $office->name_office }}</option>
+                                @endforeach
+                                </select>
+
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">E-Mail Address</label>
 

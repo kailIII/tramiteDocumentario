@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','office_id'
     ];
 
     /**
@@ -23,4 +23,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function office(){
+        return $this->belongsTo('App\Office');
+    }
+
+    public function seguimientos(){
+        return $this->hasMany('App\Seguimiento');
+    }
 }
