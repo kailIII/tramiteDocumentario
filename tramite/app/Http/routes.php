@@ -42,8 +42,10 @@ Route::group(['middleware' => 'web'], function () {
 	});
 
     Route::resource('office','OfficesController');
-    
-    Route::get('/home', 'HomeController@index');
+    Route::get('office/{id}/destroy', [
+            'uses'  => 'OfficesController@destroy',
+            'as'    => 'office.destroy',
+        ]);
 });
 
 //Route::group(['middleware' => 'web'], function(){

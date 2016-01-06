@@ -8,7 +8,13 @@
                 <div class="panel-heading">Bienvenido</div>
 
                 <div class="panel-body">
-                    Es el inicio de la aplicación, para poder empezar a usar el sistema tiene que registrarse y logearse.
+                    <p>Bienvenido al Sistema de Tramite Documentario.</p>
+                    <ul>
+                        <p>Hecho por:</p>
+                        </hr>
+                        <li>Christian Benjamin Flores Copa</li>
+                        <li>Valkiria Benites Cazorla</li>
+                    </ul>
                 </div>
             </div>
         </div>

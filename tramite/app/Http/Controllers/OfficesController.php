@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Office;
+use Laracasts\Flash\Flash;
+
 class OfficesController extends Controller
 {
     /**
@@ -21,7 +23,8 @@ class OfficesController extends Controller
 
     public function index()
     {
-        //
+        $offices = Office::orderBy('id', 'ASC')->paginate(15);
+        return view('office.index')->with('offices', $offices);
     }
 
     /**
@@ -44,7 +47,9 @@ class OfficesController extends Controller
     {
         $office = new Office($request->all());
         $office->save();
-        dd("Oficina Creada");
+
+        Flash::success("Se ha registrado " . $office->name_office . " de forma exitosa");
+        return redirect()->route('office.index');
     }
 
     /**
@@ -66,7 +71,8 @@ class OfficesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $office = Office::find($id);
+        return view('office.edit')->with('office', $office);
     }
 
     /**
@@ -78,7 +84,12 @@ class OfficesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $office = Office::find($id);
+        $office->name_office = $request->name_office;
+        $office->save();
+
+        Flash::success("Se modificado por: " . $office->name_office . " de forma exitosa");
+        return redirect()->route('office.index');
     }
 
     /**
@@ -89,6 +100,10 @@ class OfficesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $office = Office::find($id);
+        $office->delete();
+
+        Flash::error('La oficina ' . $office->name_office . " ha sido eliminado de forma exitosa.");
+        return redirect()->route('office.index');
     }
 }
