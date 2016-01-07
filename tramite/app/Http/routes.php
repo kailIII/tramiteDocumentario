@@ -42,7 +42,7 @@ Route::group(['middleware' => 'web'], function () {
 	});
 
     Route::get('/documents', function () {
-        return view('documents.doc');
+        return view('document.create');
     });
 
     Route::resource('office','OfficesController');
