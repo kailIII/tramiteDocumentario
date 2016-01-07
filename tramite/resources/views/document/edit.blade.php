@@ -7,15 +7,21 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Nuevo Documento</div>
 				<div class="panel-body">
-						{!! Form::open(['route' => 'document.store', 'method' => 'POST', 'class' => 'form-horizontal']) !!}
+						{!! Form::open(['route' => ['document.update', $document->id], 'method' => 'PUT', 'class' => 'form-horizontal']) !!}
 						<div class="form-group">
 								{!! Form::label('asunto', 'Asunto del Documento', array('class' => 'col-md-4 control-label')) !!}
 							<div class="col-md-6">
-								{!! Form::text('asunto', null, ['class' => 'form-control', 'required']) !!}
+								{!! Form::text('asunto', $document->asunto, ['class' => 'form-control', 'required']) !!}
 							</div>				
 						</div>
 						<div class="form-group">
-								{!! Form::label('name_office', 'Oficinas', array('class' => 'col-md-4 control-label')) !!}
+								{!! Form::label('label_oficina', 'Oficina Actual', array('class' => 'col-md-4 control-label')) !!}
+							<div class="col-md-6">
+								{!! Form::label('label_oficina', $document->office->name_office, array('class' => 'col-md-4 control-label')) !!}	
+							</div>
+						</div>
+						<div class="form-group">
+								{!! Form::label('name_office', 'Cambiar por', array('class' => 'col-md-4 control-label')) !!}
 							<div class="col-md-6">
 								<select type="oficina" class="form-control" name="oficina">
                                 	{!! $offices = App\Office::all() !!}
@@ -29,7 +35,7 @@
 							<div class="col-md-6 col-md-offset-4">
 								
 								<button type="submit" class="btn btn-primary">
-									<i class="fa fa-btn fa-user"></i>Crear
+									<i class="fa fa-btn fa-user"></i>Modificar
 								</button>
 							</div>
 						</div>

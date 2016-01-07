@@ -52,6 +52,12 @@ Route::group(['middleware' => 'web'], function () {
         ]);
 
     Route::resource('seguimiento', 'SeguimientoController');
+
+    Route::resource('document', 'DocumentsController');
+    Route::get('document/{id}/destroy', [
+            'uses'  => 'DocumentsController@destroy',
+            'as'    => 'document.destroy',
+        ]);
 });
 
 
