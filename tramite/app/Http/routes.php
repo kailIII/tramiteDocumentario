@@ -41,6 +41,10 @@ Route::group(['middleware' => 'web'], function () {
     	return view('home');
 	});
 
+    Route::get('/documents', function () {
+        return view('documents.doc');
+    });
+
     Route::resource('office','OfficesController');
     Route::get('office/{id}/destroy', [
             'uses'  => 'OfficesController@destroy',
