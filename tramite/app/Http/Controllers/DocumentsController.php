@@ -6,25 +6,18 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Seguimiento;
-use App\Office;
+use App\Document;
 
-class SeguimientoController extends Controller
+class DocumentsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
-        $seguimientos = Seguimiento::orderby('id', 'ASC')->paginate(8);
-        return view('seguimiento.index')->with('seguimientos', $seguimientos);
+        //
     }
 
     /**
@@ -34,7 +27,7 @@ class SeguimientoController extends Controller
      */
     public function create()
     {
-
+        return view('document.create');
     }
 
     /**

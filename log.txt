@@ -1,3 +1,22 @@
+commit a8df38da91d5d4c0e9ba3c18422806487d8b235c
+Merge: 52ab9a6 cb29b32
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Wed Jan 6 19:10:24 2016 -0500
+
+    Merge branch 'master' of https://github.com/Benjacho/tramiteDocumentario
+
+commit 52ab9a6382bf5c33feb9ed580755765a5981439b
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Wed Jan 6 19:10:11 2016 -0500
+
+    Traducido los errores del Request al español, creado errors.blade.php
+
+commit cb29b3215767e8ca2bde8fee075dc726eec569b1
+Author: valkiriacaz <valkiria.caz@gmail.com>
+Date:   Wed Jan 6 19:06:18 2016 -0500
+
+    carpeta documents
+
 commit 6fd3cd64abed3e59d4cdec5d8e000fde1f0b99c5
 Author: Benjacho <christianbfc97@gmail.com>
 Date:   Tue Jan 5 21:19:04 2016 -0500

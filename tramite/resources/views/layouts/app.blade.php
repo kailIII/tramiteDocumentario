@@ -68,7 +68,16 @@
                         </ul>
 
                     </li>
-                    <li><a href="{{ url('/') }}">Seguimiento</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fa fa-btn fa-folder-open"></i>Seguimiento
+                        <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ route('seguimiento.index') }}"><i class="fa fa-btn fa-search"></i>Ver</a></li>
+                        </ul>
+
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
