@@ -6,11 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Office;
-use Laracasts\Flash\Flash;
-use App\Http\Requests\OfficeRequest;
 
-class OfficesController extends Controller
+class SeguimientoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,8 +21,7 @@ class OfficesController extends Controller
 
     public function index()
     {
-        $offices = Office::orderBy('id', 'ASC')->paginate(8);
-        return view('office.index')->with('offices', $offices);
+        //
     }
 
     /**
@@ -35,7 +31,7 @@ class OfficesController extends Controller
      */
     public function create()
     {
-        return view('office.create');
+        //
     }
 
     /**
@@ -44,13 +40,9 @@ class OfficesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(OfficeRequest $request)
+    public function store(Request $request)
     {
-        $office = new Office($request->all());
-        $office->save();
-
-        Flash::success("Se ha registrado " . $office->name_office . " de forma exitosa");
-        return redirect()->route('office.index');
+        //
     }
 
     /**
@@ -72,8 +64,7 @@ class OfficesController extends Controller
      */
     public function edit($id)
     {
-        $office = Office::find($id);
-        return view('office.edit')->with('office', $office);
+        //
     }
 
     /**
@@ -83,14 +74,9 @@ class OfficesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(OfficeRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        $office = Office::find($id);
-        $office->name_office = $request->name_office;
-        $office->save();
-
-        Flash::success("Se modificado por: " . $office->name_office . " de forma exitosa");
-        return redirect()->route('office.index');
+        //
     }
 
     /**
@@ -101,10 +87,6 @@ class OfficesController extends Controller
      */
     public function destroy($id)
     {
-        $office = Office::find($id);
-        $office->delete();
-
-        Flash::error('La oficina ' . $office->name_office . " ha sido eliminado de forma exitosa.");
-        return redirect()->route('office.index');
+        //
     }
 }

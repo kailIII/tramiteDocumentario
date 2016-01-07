@@ -46,7 +46,11 @@ Route::group(['middleware' => 'web'], function () {
             'uses'  => 'OfficesController@destroy',
             'as'    => 'office.destroy',
         ]);
+
+    Route::resource('seguimiento', 'SeguimientoController');
 });
+
+
 
 //Route::group(['middleware' => 'web'], function(){
 //	Route::resource('office','OfficesController');

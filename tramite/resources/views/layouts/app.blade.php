@@ -14,7 +14,6 @@
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-
     <style>
         body {
             font-family: 'Lato';
@@ -39,7 +38,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}"><span class="glyphicon glyphicon-folder-close"></span>
                     Tramite Documentario
                 </a>
             </div>
@@ -48,8 +47,19 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> Oficina 
-                            <span class="caret"></span>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fa fa-btn fa-folder-open"></i>Oficina
+                        <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ route('office.index') }}"><i class="fa fa-btn fa-search"></i>Ver</a></li>
+                            <li><a href="{{ route('office.create') }}"><i class="fa fa-btn fa-plus"></i>Crear</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fa fa-btn fa-folder-open"></i>Documento
+                        <span class="caret"></span>
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
@@ -83,6 +93,7 @@
         </div>
     </nav>
     @include('flash::message')
+    @include('layouts.errors')
     @yield('content')
 
     <!-- JavaScripts -->
@@ -90,4 +101,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
+<footer>
+    <div id="copyright text-right">
+        <div class="text-center">
+            © Copyright 2015
+        </div>
+    </div>
+</footer>
 </html>

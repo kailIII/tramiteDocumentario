@@ -1,0 +1,126 @@
+commit 6fd3cd64abed3e59d4cdec5d8e000fde1f0b99c5
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Tue Jan 5 21:19:04 2016 -0500
+
+    View, Controller y Routes Office Hechos al 95% se admiten Obs
+
+commit ec46ac72758c71a85214caf8877dc054dfb9f878
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Tue Jan 5 14:04:55 2016 -0500
+
+    Working Login and input Office added, Working on View, Controller, class of Office
+
+commit dac0f2df6ca1ca6dfc713cbe3d2f009a254fdc56
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Sun Jan 3 21:41:39 2016 -0500
+
+    Menu Oficina al 50%, Test
+
+commit be351ccd840b9982f1868c35fcb4aa2abffcaeed
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Sun Jan 3 20:15:56 2016 -0500
+
+    Funcionando Migraciones al 100%, Problema con oficce_id, tablas creadas, keys relacionadas, faltan relaciones one by one many to many
+
+commit 35116886da49190224921254376932863eb3ad85
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Sun Jan 3 19:19:48 2016 -0500
+
+    Modelo Base de datos Actualizado, cambios secundarios
+
+commit 8c6101b982e0138ae5b9e237fa0af07398ec4901
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Sat Jan 2 20:27:57 2016 -0500
+
+    Login totalmente hecho y corregido
+
+commit d6fe240745f6b169978832758fcb4b04c9be10d5
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Mon Dec 28 22:56:00 2015 -0500
+
+    Agregado test table, Migracion:Office
+
+commit da9746e5af7da97c922aa07e082a3d44bf53a614
+Merge: 713122f aad48c0
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Mon Dec 28 22:25:18 2015 -0500
+
+    Merge branch 'master' of https://github.com/Benjacho/tramiteDocumentario
+
+commit 713122f157c457332532cc981cc9b13f50afe6ea
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Mon Dec 28 22:25:10 2015 -0500
+
+    Elimnado password.blade, reset.blade, layout.blade
+
+commit aad48c0ab190e0d92a299b693f5f5b264a06d1ff
+Author: valkiriacaz <valkiria.caz@gmail.com>
+Date:   Mon Dec 28 22:15:31 2015 -0500
+
+    Revert "Login hecho"
+    
+    This reverts commit 7a8079be800b031d9b4817ec912ab650fc00161b.
+
+commit cfe16456aa2c176910f66e5fb26f7f0aa9df389e
+Author: valkiriacaz <valkiria.caz@gmail.com>
+Date:   Mon Dec 28 21:59:58 2015 -0500
+
+    quitar el diseño de la base de datos
+    
+    (no se usaba)
+
+commit 7a8079be800b031d9b4817ec912ab650fc00161b
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Mon Dec 28 20:41:32 2015 -0500
+
+    Login hecho
+
+commit 95e0f0a493afd241a793fd0d9fd47e511a38f0aa
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Mon Dec 28 19:59:15 2015 -0500
+
+    Archivos hasta el login
+
+commit ae8f4c95639f4150f94d1310041f3848e4a3db08
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Mon Dec 28 18:54:17 2015 -0500
+
+    .env.example es la conexion a BD, ModelFactory.php es para crear datos aleatorios en la BD, create_users: necesita ser migrado, databaseseeder introduzco el admin, por ahora solo benjamin
+
+commit f9bf7d29e4dfa0f7f2e276f014ca30dbff0a2014
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Mon Dec 28 17:44:59 2015 -0500
+
+    Agregado el proyecto tramite, con laravel
+
+commit 5b273097662fa61e2472e028d7fd80fdf289261e
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Mon Dec 28 00:29:51 2015 -0500
+
+    Script sql para HeidiSQL
+
+commit 2e0fab1feb36628963421fe65e4f296344916beb
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Mon Dec 28 00:27:56 2015 -0500
+
+    Imprime la columna n_usu de la tabla usuario
+
+commit f44203d422a7422be3b335eb310878510b48b4df
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Sun Dec 27 23:49:49 2015 -0500
+
+    Agregado la conexion a base de datos
+
+commit f62db8b78229116af8a090be2124060c93fe9a5f
+Author: valkiriacaz <valkiria.caz@gmail.com>
+Date:   Sun Dec 27 23:22:54 2015 -0500
+
+    BaseDatos
+    
+    Registro, Seguimiento, Usuario y Oficina
+
+commit 691f4ef0604b9faddddace99440a3c0705f10fa3
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Sun Dec 27 22:15:54 2015 -0500
+
+    Create README file
