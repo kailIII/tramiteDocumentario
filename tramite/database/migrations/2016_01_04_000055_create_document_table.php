@@ -15,6 +15,9 @@ class CreateDocumentTable extends Migration
         Schema::create('document', function (Blueprint $table) {
             $table->increments('id');
             $table->string('asunto');
+            $table->integer('folios');
+            $table->string('name');
+            $table->string('detalle');
             $table->integer('office_id')->unsigned();
 
             $table->foreign('office_id')->references('id')->on('office');

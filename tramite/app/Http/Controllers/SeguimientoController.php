@@ -23,7 +23,7 @@ class SeguimientoController extends Controller
 
     public function index()
     {
-        $seguimientos = Seguimiento::orderby('id', 'ASC')->paginate(8);
+        $seguimientos = Seguimiento::orderby('id', 'DES')->paginate(8);
         return view('seguimiento.index')->with('seguimientos', $seguimientos);
     }
 
@@ -67,7 +67,8 @@ class SeguimientoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $seguimiento = Seguimiento::find($id);
+        return view('seguimiento.edit')->with('seguimiento', $seguimiento);
     }
 
     /**

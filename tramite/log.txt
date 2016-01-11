@@ -1,3 +1,53 @@
+commit 57545116256a606f9587c655fe53f7e59a73ef18
+Merge: 0616d0e a293472
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Wed Jan 6 21:18:18 2016 -0500
+
+    Merge branch 'master' of https://github.com/Benjacho/tramiteDocumentario
+
+commit 0616d0e73802462b6e1f816f728be12693c0640c
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Wed Jan 6 21:17:31 2016 -0500
+
+    Hasta documento: crear, editar, eliminar, listar
+
+commit a293472b972233fcbc58e214bbb60ba70aecc5dc
+Author: valkiriacaz <valkiria.caz@gmail.com>
+Date:   Wed Jan 6 19:52:24 2016 -0500
+
+    renombrando
+
+commit d48d0b1ac02457a43331c9a3ba83f76aba974645
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Wed Jan 6 19:55:46 2016 -0500
+
+    Añadido Seguimiento
+
+commit a8df38da91d5d4c0e9ba3c18422806487d8b235c
+Merge: 52ab9a6 cb29b32
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Wed Jan 6 19:10:24 2016 -0500
+
+    Merge branch 'master' of https://github.com/Benjacho/tramiteDocumentario
+
+commit 52ab9a6382bf5c33feb9ed580755765a5981439b
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Wed Jan 6 19:10:11 2016 -0500
+
+    Traducido los errores del Request al español, creado errors.blade.php
+
+commit cb29b3215767e8ca2bde8fee075dc726eec569b1
+Author: valkiriacaz <valkiria.caz@gmail.com>
+Date:   Wed Jan 6 19:06:18 2016 -0500
+
+    carpeta documents
+
+commit 6fd3cd64abed3e59d4cdec5d8e000fde1f0b99c5
+Author: Benjacho <christianbfc97@gmail.com>
+Date:   Tue Jan 5 21:19:04 2016 -0500
+
+    View, Controller y Routes Office Hechos al 95% se admiten Obs
+
 commit ec46ac72758c71a85214caf8877dc054dfb9f878
 Author: Benjacho <christianbfc97@gmail.com>
 Date:   Tue Jan 5 14:04:55 2016 -0500

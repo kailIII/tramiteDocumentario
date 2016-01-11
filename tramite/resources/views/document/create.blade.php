@@ -15,21 +15,44 @@
 							</div>				
 						</div>
 						<div class="form-group">
-								{!! Form::label('name_office', 'Oficinas', array('class' => 'col-md-4 control-label')) !!}
+								{!! Form::label('name_office', 'Oficina:', array('class' => 'col-md-4 control-label')) !!}
 							<div class="col-md-6">
 								<select type="oficina" class="form-control" name="oficina">
-                                	{!! $offices = App\Office::all() !!}
-                                	@foreach($offices as $office)
-                                		<option value="{!! $office->id !!}">{{ $office->name_office }}</option>
-                                	@endforeach
+                                		<option value="{{ Auth::user()->office->id }}">{{ Auth::user()->office->name_office }}</option>
                                 </select>
+							</div>
+						</div>
+						<div class="form-group">
+								{!! Form::label('name_office', 'Usuario:', array('class' => 'col-md-4 control-label')) !!}
+							<div class="col-md-6">
+								<select type="user_id" class="form-control" name="user_id">
+                                		<option value="{{ Auth::user()->id }}">{{ Auth::user()->name }}</option>
+                                </select>
+							</div>
+						</div>
+						<div class="form-group">
+								<label class="col-md-4 control-label" for="folios">Folios:</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="folios"></input>
+							</div>				
+						</div>
+						<div class="form-group">
+								<label class="col-md-4 control-label" for="name">Recibi de:</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="name"></input>
+							</div>
+						</div>
+						<div class="form-group">
+								<label class="col-md-4 control-label">Detalle: </label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="detalle"></input>
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
 								
 								<button type="submit" class="btn btn-primary">
-									<i class="fa fa-btn fa-user"></i>Crear
+									<i class="fa fa-btn fa-user"></i>Recibir 
 								</button>
 							</div>
 						</div>

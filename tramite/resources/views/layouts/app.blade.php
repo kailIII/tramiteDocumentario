@@ -64,7 +64,7 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ route('document.index') }}"><i class="fa fa-btn fa-search"></i>Ver</a></li>
-                            <li><a href="{{ route('document.create') }}"><i class="fa fa-btn fa-plus"></i>Crear</a></li>
+                            <li><a href="{{ route('document.create') }}"><i class="fa fa-btn glyphicon glyphicon-floppy-save"></i>Recepcionar</a></li>
                         </ul>
 
                     </li>

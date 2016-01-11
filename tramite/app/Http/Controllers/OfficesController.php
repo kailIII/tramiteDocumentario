@@ -86,10 +86,10 @@ class OfficesController extends Controller
     public function update(OfficeRequest $request, $id)
     {
         $office = Office::find($id);
-        $office->name_office = $request->name_office;
-        $office->save();
+        $office->fill($request->all());
 
         Flash::success("Se modificado por: " . $office->name_office . " de forma exitosa");
+        $office->save();
         return redirect()->route('office.index');
     }
 

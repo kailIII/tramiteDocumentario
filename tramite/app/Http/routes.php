@@ -37,9 +37,6 @@ Route::group(['middleware' => 'web'], function () {
     	return view('welcome');
 	});
 
-    Route::get('/home', function () {
-    	return view('home');
-	});
 
     Route::get('/documents', function () {
         return view('document.create');
@@ -58,6 +55,7 @@ Route::group(['middleware' => 'web'], function () {
             'uses'  => 'DocumentsController@destroy',
             'as'    => 'document.destroy',
         ]);
+    
 });
 
 

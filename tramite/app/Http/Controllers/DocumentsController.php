@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Laracasts\Flash\Flash;
 use App\Document;
 use App\Office;
+use App\Seguimiento;
 
 class DocumentsController extends Controller
 {
@@ -51,6 +52,13 @@ class DocumentsController extends Controller
         $document->office_id= $request->oficina;
         $document->save();
 
+        $seguimiento = new Seguimiento($request->all());
+        $seguimiento->estado = 'RECIBIDO';
+        $seguimiento->document_id = $document->id;
+        $seguimiento->office_id = $request->oficina;
+        $seguimiento->user_id = $request->user_id;
+        $seguimiento->save();
+        
         Flash::success("Se ha registrado ". $document->asunto ." de forma exitosa!");
         return redirect()->route('document.index');
     }
@@ -88,7 +96,9 @@ class DocumentsController extends Controller
     public function update(Request $request, $id)
     {
         $document = Document::find($id);
+        $document->office_id= $request->oficina;
         $document->fill($request->all());
+
         Flash::success("Se modificado por: " . $document->asunto . " de forma exitosa");
         $document->save();
         return redirect()->route('document.index');

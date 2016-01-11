@@ -8,7 +8,7 @@ class Document extends Model
 {
     protected $table = "document";
 
-    protected $fillable = ['asunto', 'office_id'];
+    protected $fillable = ['asunto','folios','name','detalle','office_id'];
 
     public function office(){
     	return $this->belongsTo('App\Office');
