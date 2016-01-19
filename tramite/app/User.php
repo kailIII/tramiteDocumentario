@@ -28,7 +28,7 @@ class User extends Authenticatable
         return $this->belongsTo('App\Office');
     }
 
-    public function seguimientos(){
-        return $this->hasMany('App\Seguimiento');
+    public function documentos(){
+        return $this->hasMany('App\Document');
     }
 }

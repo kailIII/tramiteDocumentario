@@ -9,9 +9,9 @@
 				<div class="panel-body">
 					{!! Form::open(['route' => 'office.store', 'method' => 'POST', 'class' => 'form-horizontal']) !!}
 						<div class="form-group">
-								{!! Form::label('name', 'Nombre', array('class' => 'col-md-4 control-label')) !!}
+								{!! Form::label('namelabel', 'Nombre', array('class' => 'col-md-4 control-label')) !!}
 							<div class="col-md-6">
-								{!! Form::text('name_office', null, ['class' => 'form-control', 'required']) !!}
+								{!! Form::text('name', null, ['class' => 'form-control', 'required']) !!}
 							</div>				
 						</div>
 						<div class="form-group">

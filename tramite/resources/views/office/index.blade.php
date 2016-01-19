@@ -19,7 +19,7 @@
 							@foreach($offices as $office)
 								<tr>
 									<td>{{ $office->id }}</td>
-									<td>{{ $office->name_office }}</td>
+									<td>{{ $office->name }}</td>
 									<td>
 									<a href="{{ route('office.edit', $office->id) }}" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a> 
 									<a href="{{ route('office.destroy', $office->id) }}" onclick="return confirm('¿Seguro que deseas eliminarlo?')" class="btn btn-danger"><span class="glyphicon glyphicon-minus-sign"></span></a>

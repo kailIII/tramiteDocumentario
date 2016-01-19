@@ -30,7 +30,7 @@
                                 <select type="oficina" class="form-control" name="oficina">
                                 {!! $offices = App\Office::all() !!}
                                 @foreach($offices as $office)
-                                <option value="{!! $office->id !!}">{{ $office->name_office }}</option>
+                                <option value="{!! $office->id !!}">{{ $office->name }}</option>
                                 @endforeach
                                 </select>
 

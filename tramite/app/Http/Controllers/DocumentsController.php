@@ -9,8 +9,7 @@ use App\Http\Controllers\Controller;
 use Laracasts\Flash\Flash;
 use App\Document;
 use App\Office;
-use App\Seguimiento;
-
+use App\User;
 class DocumentsController extends Controller
 {
     /**
@@ -49,15 +48,9 @@ class DocumentsController extends Controller
     public function store(Request $request)
     {
         $document = new Document($request->all());
+        
         $document->office_id= $request->oficina;
         $document->save();
-
-        $seguimiento = new Seguimiento($request->all());
-        $seguimiento->estado = 'RECIBIDO';
-        $seguimiento->document_id = $document->id;
-        $seguimiento->office_id = $request->oficina;
-        $seguimiento->user_id = $request->user_id;
-        $seguimiento->save();
         
         Flash::success("Se ha registrado ". $document->asunto ." de forma exitosa!");
         return redirect()->route('document.index');

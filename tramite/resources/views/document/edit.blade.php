@@ -17,7 +17,7 @@
 						<div class="form-group">
 								{!! Form::label('label_oficina', 'Oficina Actual', array('class' => 'col-md-4 control-label')) !!}
 							<div class="col-md-6">
-								{!! Form::label('label_oficina', $document->office->name_office, array('class' => 'col-md-4 control-label')) !!}	
+								{!! Form::label('label_oficina', $document->office->name, array('class' => 'col-md-4 control-label')) !!}	
 							</div>
 						</div>
 						<div class="form-group">
@@ -32,7 +32,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
+							<div class="col-md-6">
 								
 								<button type="submit" class="btn btn-primary">
 									<i class="fa fa-btn fa-user"></i>Modificar

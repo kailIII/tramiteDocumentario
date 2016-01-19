@@ -14,7 +14,7 @@ class CreateOfficesTable extends Migration
     {
         Schema::create('office', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name_office', 45);
+            $table->string('name', 45);
             $table->timestamps();
         });
     }

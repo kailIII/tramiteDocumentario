@@ -1,0 +1,40 @@
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   tramite/app/Document.php
+	modified:   tramite/app/Http/Controllers/DocumentsController.php
+	modified:   tramite/app/Http/Controllers/OfficesController.php
+	deleted:    tramite/app/Http/Controllers/SeguimientoController.php
+	modified:   tramite/app/Http/Requests/OfficeRequest.php
+	modified:   tramite/app/Http/routes.php
+	modified:   tramite/app/Office.php
+	deleted:    tramite/app/Seguimiento.php
+	modified:   tramite/app/User.php
+	modified:   tramite/database/migrations/2016_01_03_234014_create_offices_table.php
+	modified:   tramite/database/migrations/2016_01_03_240000_create_users_table.php
+	modified:   tramite/database/migrations/2016_01_04_000055_create_document_table.php
+	deleted:    tramite/database/migrations/2016_01_04_002436_create_seguimiento_table.php
+	modified:   tramite/resources/views/auth/register.blade.php
+	modified:   tramite/resources/views/document/create.blade.php
+	modified:   tramite/resources/views/document/edit.blade.php
+	modified:   tramite/resources/views/document/index.blade.php
+	modified:   tramite/resources/views/layouts/app.blade.php
+	modified:   tramite/resources/views/office/create.blade.php
+	modified:   tramite/resources/views/office/edit.blade.php
+	modified:   tramite/resources/views/office/index.blade.php
+	deleted:    tramite/resources/views/seguimiento/edit.blade.php
+	deleted:    tramite/resources/views/seguimiento/index.blade.php
+	modified:   tramites.mwb
+	modified:   tramites.mwb.bak
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	status.txt
+	tramite.sql
+	tramite.zip
+
+no changes added to commit (use "git add" and/or "git commit -a")

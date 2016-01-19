@@ -8,13 +8,9 @@ class Document extends Model
 {
     protected $table = "document";
 
-    protected $fillable = ['asunto','folios','name','detalle','office_id'];
+    protected $fillable = ['id','asunto','folios','name','detalle','office_id'];
 
-    public function office(){
-    	return $this->belongsTo('App\Office');
-    }
-
-    public function seguimientos(){
-    	return $this->hasMany('App\Seguimiento');
+    public function user(){
+    	return $this->belongsTo('App\User');
     }
 }

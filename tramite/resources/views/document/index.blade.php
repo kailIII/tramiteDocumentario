@@ -12,9 +12,9 @@
 								<th class="text-center">ID</th>
 								<th class="text-center">Asunto</th>
 								<th class="text-center">Folios</th>
-								<th class="text-center">Nombre</th>
+								<th class="text-center">Remitente</th>
 								<th class="text-cemter">Detalle</th>
-								<th class="text-center">Oficina</th>
+								
 							</tr>
 						</thead>
 						<tbody>
@@ -25,7 +25,7 @@
 									<td>{{ $document->folios }}</td>
 									<td>{{ $document->name }}</td>
 									<td>{{ $document->detalle }}</td>
-									<td>{{ $document->office->name_office }}</td>
+
 									<td>
 									<a href="{{ route('document.edit', $document->id) }}" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
 									<a href="{{ route('document.destroy', $document->id) }}" onclick="return confirm('¿Seguro que deseas eliminarlo?')" class="btn btn-danger"><span class="glyphicon glyphicon-minus-sign"></span></a>

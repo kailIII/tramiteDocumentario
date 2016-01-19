@@ -48,7 +48,6 @@ Route::group(['middleware' => 'web'], function () {
             'as'    => 'office.destroy',
         ]);
 
-    Route::resource('seguimiento', 'SeguimientoController');
 
     Route::resource('document', 'DocumentsController');
     Route::get('document/{id}/destroy', [

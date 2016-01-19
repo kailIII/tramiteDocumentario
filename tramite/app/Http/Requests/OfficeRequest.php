@@ -24,7 +24,7 @@ class OfficeRequest extends Request
     public function rules()
     {
         return [
-            'name_office'   => 'required|unique:office'
+            'name'   => 'required|unique:office'
         ];
     }
 }

@@ -8,17 +8,9 @@ class Office extends Model
 {
     protected $table = "office";
 
-    protected $fillable = ['name_office'];
+    protected $fillable = ['name'];
 
     public function users(){
     	return $this->hasMany('App\User');
-    }
-
-    public function documents(){
-    	return $this->hasMany('App\Document');
-    }
-
-    public function seguimientos(){
-    	return $this->hasMany('App\Seguimiento');
     }
 }

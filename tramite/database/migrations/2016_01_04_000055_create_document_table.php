@@ -15,12 +15,13 @@ class CreateDocumentTable extends Migration
         Schema::create('document', function (Blueprint $table) {
             $table->increments('id');
             $table->string('asunto');
+            $table->enum('estado', ['Recibido','Enviado','Solucionado']);
             $table->integer('folios');
             $table->string('name');
             $table->string('detalle');
-            $table->integer('office_id')->unsigned();
+            $table->integer('user_id')->unsigned();
 
-            $table->foreign('office_id')->references('id')->on('office');
+            $table->foreign('user_id')->references('id')->on('office');
             $table->timestamps();
         });
     }

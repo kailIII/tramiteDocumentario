@@ -18,7 +18,7 @@
 								{!! Form::label('name_office', 'Oficina:', array('class' => 'col-md-4 control-label')) !!}
 							<div class="col-md-6">
 								<select type="oficina" class="form-control" name="oficina">
-                                		<option value="{{ Auth::user()->office->id }}">{{ Auth::user()->office->name_office }}</option>
+                                		<option value="{{ Auth::user()->office->id }}">{{ Auth::user()->office->name }}</option>
                                 </select>
 							</div>
 						</div>

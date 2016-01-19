@@ -49,7 +49,7 @@ class OfficesController extends Controller
         $office = new Office($request->all());
         $office->save();
 
-        Flash::success("Se ha registrado " . $office->name_office . " de forma exitosa");
+        Flash::success("Se ha registrado " . $office->name . " de forma exitosa");
         return redirect()->route('office.index');
     }
 
@@ -88,7 +88,7 @@ class OfficesController extends Controller
         $office = Office::find($id);
         $office->fill($request->all());
 
-        Flash::success("Se modificado por: " . $office->name_office . " de forma exitosa");
+        Flash::success("Se modificado por: " . $office->name . " de forma exitosa");
         $office->save();
         return redirect()->route('office.index');
     }
@@ -104,7 +104,7 @@ class OfficesController extends Controller
         $office = Office::find($id);
         $office->delete();
 
-        Flash::error('La oficina ' . $office->name_office . " ha sido eliminado de forma exitosa.");
+        Flash::error('La oficina ' . $office->name . " ha sido eliminado de forma exitosa.");
         return redirect()->route('office.index');
     }
 }
